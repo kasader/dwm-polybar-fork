@@ -16,7 +16,7 @@ static const char *altbarclass = "Polybar";     /* Alternate bar class name */
 static const char *alttrayname      = "tray";    /* Polybar tray instance name */
 static const char *altbarcmd  = "$HOME/bar.sh"; /* Alternate bar launch command */
 
-static const char *fonts[]          = { "Unifont:size=12", "Font Awesome 5 Pro:size=12"	};
+static const char *fonts[]          = { "Unifont:size=12", "Font Awesome 5 Pro:size=12", "Source Code Pro:size=12" };
 static const char dmenufont[]       = "Source Code Pro:size=12" ;
 static const char col_gray1[]       = "#1A1B26";
 static const char col_gray2[]       = "#1A1B26";
@@ -49,7 +49,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "", "二", "三", "四", "五", "六", "七", "八", "九" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -58,6 +58,7 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "Zoom",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
@@ -112,7 +113,7 @@ static Key keys[] = {
 	{ MODKEY,             		XK_backslash, 	   spawn,          {.v = termcmd2 } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-	{ MODKEY,                       XK_l,      focusstack,     {.i = -1 } },
+	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 	{ MODKEY,                       XK_o,      incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_p,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
